@@ -34,6 +34,8 @@ public class LoginAction extends BaseAction {
 	public String doLogin(@ModelAttribute("LoginForm") LoginForm form, HttpServletRequest request, HttpServletResponse response) {
 		try {
 			System.out.println(request.getRemoteAddr());
+			System.out.println(form.getAccount());
+			System.out.println(form.getPassword());
 			
 		} catch (Exception e) {
 			if (log.isErrorEnabled()) {
