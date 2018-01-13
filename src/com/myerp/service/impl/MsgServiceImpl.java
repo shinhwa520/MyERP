@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.myerp.dao.UserDAO;
 import com.myerp.dao.WebApiMasterDAO;
 import com.myerp.service.MsgService;
 import com.myerp.service.vo.MsgServiceVO;
@@ -15,6 +16,7 @@ import com.myerp.service.vo.MsgServiceVO;
 public class MsgServiceImpl implements MsgService {
 
 	private WebApiMasterDAO webApiMasterDAO;
+	private UserDAO userDAO;
 	
 	@Override
 	public List<MsgServiceVO> findMakaIds() {
@@ -25,6 +27,8 @@ public class MsgServiceImpl implements MsgService {
 				
 			}
 			
+			userDAO.listUsers();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -34,5 +38,10 @@ public class MsgServiceImpl implements MsgService {
 	@Autowired
 	public void setWebApiMasterDAO(WebApiMasterDAO webApiMasterDAO) {
 		this.webApiMasterDAO = webApiMasterDAO;
+	}
+
+	@Autowired
+	public void setUserDAO(UserDAO userDAO) {
+		this.userDAO = userDAO;
 	}
 }
