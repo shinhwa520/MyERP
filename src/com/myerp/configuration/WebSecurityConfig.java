@@ -16,10 +16,6 @@ import com.myerp.service.impl.UserDetailsServiceImpl;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Bean
-	public CustomerDAO customerDAO() {
-		return new CustomerDAO();
-	};
-	@Bean
 	public UserDetailsService userDetailsService() {
 		return new UserDetailsServiceImpl();
 	};

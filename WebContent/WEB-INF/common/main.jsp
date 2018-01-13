@@ -170,6 +170,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <li>
         <a href="${pageContext.request.contextPath}/account/list"><i class="fa fa-user"></i> <span>User</span></a>
         </li>
+        
+        <li class="<c:if test="${active eq 'API_MAIN' || active eq 'API_MANAGE' }">active</c:if> treeview">
+          <a href="#">
+            <i class="fa fa-server"></i> <span>API</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu <c:if test="${active eq 'API_MAIN' || active eq 'API_MANAGE' }">menu-open</c:if>">
+            <li <c:if test="${active eq 'API_MAIN'}">class="active"</c:if>><a href="${pageContext.request.contextPath}/retrieve"><i class="fa fa-circle-o"></i> 表單資料接收</a></li>
+            <li <c:if test="${active eq 'API_MANAGE'}">class="active"</c:if>><a href="${pageContext.request.contextPath}/views/retrieve/retrieve_manage"><i class="fa fa-circle-o"></i> 資料接收排程管理</a></li>
+          </ul>
+        </li>
          
         <li class="<c:if test="${active eq 'SETTING_DESTINATION' || active eq 'SETTING_PROFILE_PARAMETER' || active eq 'SETTING_PROFILE'|| active eq 'SETTING_PROFILE_GROUP' }">active</c:if> treeview">
           <a href="#">
