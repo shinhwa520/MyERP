@@ -17,8 +17,8 @@ public class Customer {
 	private int id;
 	
 	@Size(min=1, max=50)
-    @Column(name = "USER_NAME", nullable = false)
-	private String userName;
+    @Column(name = "cust_name", nullable = false)
+	private String custName;
 
 	public int getId() {
 		return id;
@@ -28,11 +28,13 @@ public class Customer {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getCustName() {
+		return custName;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setCustName(String custName) {
+		this.custName = custName;
 	}
+
+
 }
