@@ -6,7 +6,7 @@
 	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<name>MyERP</name>
-	<build>
+	<build> 
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
