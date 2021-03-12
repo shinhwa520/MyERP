@@ -1,2 +1,2 @@
 # MyERP
-Out team's ERP
+Our team's ERP
